@@ -445,8 +445,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6421ec96072a3f44894545aff661ab67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivityX: 400
-  sensitivityY: 400
+  sensitivityX: 50
+  sensitivityY: 50
   orientation: {fileID: 443455954}
 --- !u!1 &1045124959
 GameObject:
@@ -769,8 +769,8 @@ MonoBehaviour:
   moveSpeed: 7
   groundDrag: 5
   jumpForce: 7
-  jumpCooldown: 1
-  airMultiplier: 0
+  jumpCooldown: 0.25
+  airMultiplier: 0.4
   walkSpeed: 0
   sprintSpeed: 0
   jumpKey: 32
