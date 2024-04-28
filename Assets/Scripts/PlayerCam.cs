@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class PlayerCam : MonoBehaviour
 {
-    public float sensitivityX;
-    public float sensitivityY;
+    public float sensitivityX; // external tunning
+    public float sensitivityY; // external tunning
+    private float sensitivityFactor = 0.05f; // internal tunning
 
     public Transform orientation;
 
@@ -21,8 +22,8 @@ public class PlayerCam : MonoBehaviour
     void Update()
     {
         // get mouse input
-        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensitivityX;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensitivityY;
+        float mouseX = Input.GetAxisRaw("Mouse X") * sensitivityX * sensitivityFactor;
+        float mouseY = Input.GetAxisRaw("Mouse Y") * sensitivityY * sensitivityFactor;
 
         rotationY += mouseX;
         rotationX -= mouseY; //...whooot?
